@@ -3,12 +3,12 @@ body {
     margin: 0;
     background-image: linear-gradient(to right, #575767 60%, #808080 40%);
   }
-
+  
   .input-group{
     display: flex; 
     align-items: flex-start; 
-    margin-bottom: 30px; /* Espacio entre los grupos de entrada */
-    width: 100px; /* Ajusta el ancho total del grupo */
+    margin-bottom: 30px; 
+    width: 100px; 
     margin-left: 400px;
     margin-right: auto;
     margin-top: 30px;
@@ -53,20 +53,6 @@ body {
     
   }
   
-  /*.Password{
-    padding: 20px;
-    margin-right: 10px;
-    margin-left:545px;
-    background-color: #0b0b0b;
-    color: rgb(243, 236, 236);
-    border-radius: 100px;
-    width: 150px; 
-    height: 40px; 
-    display:block;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }*/
 
   .password-text{
     padding: 7px; 
@@ -118,9 +104,9 @@ body {
     margin-left: 660px;
   }
   .divider-line.horizontal {
-    flex-grow: 20; /* Permite que la línea se expanda para ocupar el espacio */
-    border: 10; /* Elimina el borde predeterminado */
-    border-top: 0px solid #ccc; /* Crea la línea horizontal */
+    flex-grow: 20; 
+    border: 10; 
+    border-top: 0px solid #ccc; 
     height: 1px;
     border-left: 150px solid #ccc;
   }
@@ -134,5 +120,5 @@ body {
   }
 
   .label-ancho-fijo {
-    width: 100px; /* Establece el ancho fijo deseado */
+    width: 100px; 
   }
