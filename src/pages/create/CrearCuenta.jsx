@@ -36,7 +36,7 @@ const Crearcuenta = () => {
         />
       </div>
       <div className="group">
-        <label htmlFor="contraseñaB"> Contraseña:</label>
+        <label htmlFor="contraseñaB">Confirmar Contraseña:</label>
         <input
           type="text"
           className="contraseñaB-text"
