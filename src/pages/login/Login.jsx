@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "/src/pages/login/Login.css";
 const Login = () => {
     return(
@@ -23,14 +24,13 @@ const Login = () => {
             name="password"
             />
         </div>
-        <button className='btonIniciarSesion'>Iniciar Sesión</button>
+        <Link className='btonIniciarSesion'>Iniciar Sesión</Link>
         <div className="divider-grid">
             <hr className="divider-line horizontal" />
             <span className="divider-text">O</span>
             <hr className="divider-line horizontal" />
         </div>
-        <button className='btonCrearCuenta'>Crear una cuenta</button>
-
+        <Link to="crearCuenta" className='btonCrearCuenta'>Crear una cuenta</Link>
         </>
     );
   };
