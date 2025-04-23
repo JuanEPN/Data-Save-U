@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/login/Login";
-import Inicio from "../pages/inicio/Inicio";
+import Crear from "../pages/create/Crear";
+
 
 const Routers = createBrowserRouter([
     { path: "/", element: <Login /> },
-    { path: "/inicio", element: <Inicio /> },
+    { path: "/create", element: <Crear/>}, 
 ]);
 
 export default Routers;
