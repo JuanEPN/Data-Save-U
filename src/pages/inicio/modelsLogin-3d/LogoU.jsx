@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 const LogoU = (props) => {
-  const {nodes,materials} = useGLTF("/models-3d/Logo-U.glb");
+  const {nodes,materials} = useGLTF("models-3d/Logo-U.glb");
 
   return (
     <group {...props} dispose={null}>
@@ -12,6 +12,7 @@ const LogoU = (props) => {
           material={materials['SVGMat.003']}
           position={[-0.025, 0.001, 0.004]}
           rotation={[1.578, 0.012, -0.046]}
+          scale={100}
         />
       </group>
     </group>
@@ -20,4 +21,4 @@ const LogoU = (props) => {
 
 export default LogoU;
 
-useGLTF.preload("/models-3d/Logo-U.glb");
+useGLTF.preload("models-3d/Logo-U.glb");
