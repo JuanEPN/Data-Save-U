@@ -10,9 +10,8 @@ const LogoU = (props) => {
           name="Curve"
           geometry={nodes.Curve.geometry}
           material={materials['SVGMat.003']}
-          position={[-0.025, 0.001, 0.004]}
+          position={[0, 0, 0]}
           rotation={[1.578, 0.012, -0.046]}
-          scale={100}
         />
       </group>
     </group>

@@ -123,6 +123,8 @@ body {
   }
 
   .Logo{
-    margin-right: 800px;
-    margin-top: -300px;
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 150vh;
+    margin-left: -400px;
+    margin-top: -960px;
   }
