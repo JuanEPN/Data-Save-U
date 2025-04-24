@@ -40,11 +40,10 @@ const Login = () => {
         </Link>
 
         <div className="Logo">
-          <Canvas>
-            <OrbitControls />
+          <Canvas >
             <ambientLight />
-            <directionalLight position={[1, 1, 1]} intensity={8} />
-            <LogoU position={[-40, 60, 1]} scale={30} />
+            <directionalLight position={[0, 25, -60]} intensity={8} />
+            <LogoU position={[-1, -5, -2]} scale={90} />
           </Canvas>
         </div>
       </div>
