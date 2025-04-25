@@ -89,3 +89,28 @@ body {
   align-items: center;
   text-align: center;
 }
+
+.Logo1 {
+  width: 100vw;
+  height: 150vh;
+  margin-left: -400px;
+  margin-top: -930px;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px; /* da espacio para el error sin empujar */
+}
+
+.error-message {
+  position: absolute;
+  top: 60px; /* ajusta según el alto del input */
+  left: 20px;
+  color: red;
+  font-size: 0.8em;
+  height: 20px;
+  pointer-events: none;
+}
