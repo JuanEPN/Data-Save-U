@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";
 import LogoU from "../inicio/modelsLogin-3d/LogoU";
-import { OrbitControls } from "@react-three/drei";
+import { Text3D } from "@react-three/drei";
 
 const Login = () => {
   return (
@@ -40,13 +40,25 @@ const Login = () => {
         </Link>
 
         <div className="Logo">
-          <Canvas >
+          <Canvas>
             <ambientLight />
             <directionalLight position={[0, 25, -60]} intensity={8} />
-            <LogoU position={[-1, -5, -2]} scale={90} />
+            <LogoU position={[-1, -2.5, -2]} scale={70} />
+            <Text3D position={[-1.3, -2.5, 0]} 
+            font="/fonts/Blue Ocean_Regular.json"
+            bevelEnabled
+            bevelSize={0.01}
+            bevelThickness={0.01}
+            height={0.1}
+            size={0.5}
+            >
+              {" DATA SAVE "}
+              <meshStandardMaterial color= "black"/>
+            </Text3D>
           </Canvas>
         </div>
       </div>
+
     </>
   );
 };
