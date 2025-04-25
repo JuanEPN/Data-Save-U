@@ -1,130 +1,144 @@
-body { 
-    height: 100vh; 
-    margin: 0;
-    background-image: linear-gradient(to right, #575767 60%, #808080 40%);
-  }
-  
-  .input-group{
-    display: flex; 
-    align-items: flex-start; 
-    margin-bottom: 30px; 
-    width: 100px; 
-    margin-left: 400px;
-    margin-right: auto;
-    margin-top: 30px;
-  }
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to right, #575767 60%, #808080 40%);
+}
 
-  .input-group label {
-    color: white; 
-    text-align: left; 
-    padding: 15px;
-    margin-left:200px;
-    margin-right: 20px;
-    background-color: #0b0b0b;
-    color: rgb(243, 236, 236);
-    border-radius: 70px;
-    width: 100px; 
-    height: 20px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    margin-top: 10px;
-  
-  }
+.input-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 100px;
+  margin-left: 400px;
+  margin-right: auto;
+  margin-top: 30px;
+}
 
-  
-  .user-text {
-    margin-left: 20px;
-    margin-top: 10px;
-    padding: 7px; 
-    border: 1px solid #ccc; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 25px; 
-    box-sizing: border-box;
-  }
+.input-group label {
+  color: white;
+  text-align: left;
+  padding: 15px;
+  margin-left: 200px;
+  margin-right: 20px;
+  background-color: #0b0b0b;
+  color: rgb(243, 236, 236);
+  border-radius: 70px;
+  width: 100px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
 
-  .container{
-    display: flex; 
-    align-items: center; 
-    margin-top: 20px;
-    margin-left: 60px;
-    
-  }
-  
-  .password-text{
-    padding: 7px; 
-    border: 1px solid #ccc; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 25px; 
-    box-sizing: border-box;
-    margin-top: 10px;
-  }
+.user-text {
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 25px;
+  box-sizing: border-box;
+}
 
-  .btonIniciarSesion{
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 60px;
+}
 
-    margin-top: 100px;
-    padding: 20px;
-    margin-left:630px;
-    background-color: #3e3662;
-    color: rgb(243, 236, 236);
-    border-radius: 100px;
-    width: 400px; 
-    height: 15px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }
+.password-text {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 25px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
 
-  .btonCrearCuenta{
-    margin-top: 50px;
-    padding: 20px;
-    margin-left:630px;
-    background-color: #3e3662;
-    color: rgb(243, 236, 236);
-    border-radius: 100px;
-    width: 400px; 
-    height: 15px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }
+.show-password-btn {
+  margin-left: 10px;
+  margin-top: 19px;
+  padding: 5px 18px;
+  background-color: #3e3662;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-  .divider-grid {
-    display: grid; 
-    grid-template-columns: 1fr auto 1fr; 
-    align-items: center; 
-    width: 30%; 
-    margin: 30px auto;
-    margin-left: 660px;
-  }
-  .divider-line.horizontal {
-    flex-grow: 20; 
-    border: 10; 
-    border-top: 0px solid #ccc; 
-    height: 1px;
-    border-left: 150px solid #ccc;
-  }
-  
-  .divider-text {
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 2em;
-    color: #fcf9f9;
-    padding: 0 10px;
-  }
+.show-password-btn:hover {
+  background-color: #575767;
+}
 
-  .label-ancho-fijo {
-    width: 100px; 
-  }
+.btonIniciarSesion {
+  margin-top: 100px;
+  padding: 20px;
+  margin-left: 630px;
+  background-color: #3e3662;
+  color: rgb(243, 236, 236);
+  border-radius: 100px;
+  width: 400px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  .Logo{
-    width: 100vw; /* 100% del ancho de la ventana */
-    height: 150vh;
-    margin-left: -400px;
-    margin-top: -960px;
-  }
+.btonCrearCuenta {
+  margin-top: 50px;
+  padding: 20px;
+  margin-left: 630px;
+  background-color: #3e3662;
+  color: rgb(243, 236, 236);
+  border-radius: 100px;
+  width: 400px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divider-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 30%;
+  margin: 30px auto;
+  margin-left: 660px;
+}
+.divider-line.horizontal {
+  flex-grow: 20;
+  border: 10;
+  border-top: 0px solid #ccc;
+  height: 1px;
+  border-left: 150px solid #ccc;
+}
+
+.divider-text {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 2em;
+  color: #fcf9f9;
+  padding: 0 10px;
+}
+
+.label-ancho-fijo {
+  width: 100px;
+}
+
+.Logo {
+  width: 100vw;
+  height: 150vh;
+  margin-left: -400px;
+  margin-top: -960px;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
