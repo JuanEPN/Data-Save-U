@@ -122,11 +122,11 @@ body {
 }
 
 .divider-text {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 0px;
+  margin-left: 0px;
   font-size: 2em;
   color: #fcf9f9;
-  padding: 0 10px;
+  padding: 0 60px;
 }
 
 .label-ancho-fijo {
