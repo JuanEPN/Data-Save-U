@@ -1,7 +1,9 @@
 import { useState } from "react";
-import "./CrearClientes.css";
+import { db } from "../../firebaseConfig"; 
+import { collection, addDoc } from "firebase/firestore"; 
+import "./CrearCliente.css";
 
-function CrearClientes() {
+function Crear() {
   const [cliente, setCliente] = useState({
     nit: "",
     nombre: "",
@@ -18,17 +20,22 @@ function CrearClientes() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Cliente creado:", cliente);
-    alert('Cliente creado exitosamente 🚀');
-    setCliente({
-      nit: "",
-      nombre: "",
-      area: "",
-      descripcion: "",
-      correo: ""
-    });
+    try {
+      await addDoc(collection(db, "clientes"), cliente);
+      alert('Cliente creado exitosamente en Firebase 🚀');
+      setCliente({
+        nit: "",
+        nombre: "",
+        area: "",
+        descripcion: "",
+        correo: ""
+      });
+    } catch (error) {
+      console.error("Error al crear el cliente:", error);
+      alert('Error al crear cliente ❌');
+    }
   };
 
   return (
@@ -80,4 +87,5 @@ function CrearClientes() {
   );
 }
 
-export default CrearClientes;
+export default Crear;
+
