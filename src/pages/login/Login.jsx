@@ -24,7 +24,7 @@ const Login = () => {
     try {
       await loginWithEmailAndPassword(email, password);
       console.log("¡Login exitoso!");
-      navigate("/dashboard"); // Redirecciona al Dashboard
+      navigate("/create"); // Redirecciona al Dashboard
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
       alert("Usuario o contraseña incorrectos");
@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="login-container">
       <div>
         <div className="input-group">
           <label htmlFor="usuario">Usuario:</label>
@@ -101,7 +101,7 @@ const Login = () => {
           </Canvas>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
