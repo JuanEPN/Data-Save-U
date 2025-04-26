@@ -3,7 +3,7 @@ import { db } from "../../../../firebase";
 import { collection, addDoc } from "firebase/firestore"; 
 import "./CrearClientes.css";
 
-function Crear() {
+function CrearClientes() {
   const [cliente, setCliente] = useState({
     nit: "",
     nombre: "",
@@ -87,5 +87,5 @@ function Crear() {
   );
 }
 
-export default Crear;
+export default CrearClientes;
 
