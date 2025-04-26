@@ -1,13 +1,10 @@
-import ErrorBoundary from "./router/ErrorBoundary";
-import { RouterProvider } from "react-router-dom";
-import Routers from "./router/Routers";
+import './App.css'
+import Login from './pages/login/Login'
 
 function App() {
   return (
-    <ErrorBoundary>
-      <RouterProvider router={Routers} />
-    </ErrorBoundary>
-  );
+    <Login />
+  )
 }
 
-export default App;
+export default App

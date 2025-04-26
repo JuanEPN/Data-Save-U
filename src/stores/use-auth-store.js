@@ -5,17 +5,19 @@ import {
   signOut 
 } from "firebase/auth";
 
-import { auth } from "../../firebase";
+import { auth } from "../../firebase"; 
 
-export const useAuthStore = create((set) => ({
+const useAuthStore = create((set) => ({
   user: null,
   loading: true,
 
   loginWithEmailAndPassword: async (email, password) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      set({ user: userCredential.user });
     } catch (error) {
       console.error("Error en login:", error);
+      throw error; // 👈 importante para que el `catch` en tu Login.jsx funcione
     }
   },
 
@@ -39,3 +41,5 @@ export const useAuthStore = create((set) => ({
     });
   },
 }));
+
+export default useAuthStore; 

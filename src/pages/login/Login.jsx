@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuthStore } from "../../stores/use-auth-store";
+import useAuthStore from "../../stores/use-auth-store";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";
 import LogoU from "../inicio/modelsLogin-3d/LogoU";
@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await loginWithEmailAndPassword(email, password);
       console.log("¡Login exitoso!");
-      navigate("/dashboard"); // cambia a donde quieras redirigir
+      navigate("/create"); // cambia a donde quieras redirigir
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
       alert("Usuario o contraseña incorrectos");
