@@ -1,0 +1,34 @@
+.ver-clientes-container {
+    padding: 20px;
+    margin: 40px;
+    background: #f7f7f7;
+    border-radius: 10px;
+  }
+  
+  .ver-clientes-title {
+    text-align: center;
+    color: #3e3662;
+    margin-bottom: 20px;
+  }
+  
+  .clientes-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .clientes-table th,
+  .clientes-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .clientes-table th {
+    background-color: #3e3662;
+    color: white;
+  }
+  
+  .clientes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
