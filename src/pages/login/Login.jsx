@@ -24,7 +24,7 @@ const Login = () => {
     try {
       await loginWithEmailAndPassword(email, password);
       console.log("¡Login exitoso!");
-      navigate("/create"); // Redirecciona al Dashboard
+      navigate("/createClient"); // Redirecciona al Dashboard
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
       alert("Usuario o contraseña incorrectos");
