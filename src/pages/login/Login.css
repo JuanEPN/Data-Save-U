@@ -131,14 +131,11 @@ body {
 }
 
 .Logo {
+  width: 100vw;
+  height: 150vh;
+  margin-left: -400px;
+  margin-top: -910px;
   position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  width: 350px;
-  height: 350px;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
-
-
