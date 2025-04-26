@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { db } from "../../firebaseConfig"; 
+import { db } from "../../../../firebase"; 
 import { collection, addDoc } from "firebase/firestore"; 
-import "./CrearCliente.css";
+import "./CrearClientes.css";
 
 function Crear() {
   const [cliente, setCliente] = useState({
