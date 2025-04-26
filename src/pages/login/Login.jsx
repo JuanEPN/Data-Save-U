@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";
+import React, { useState } from "react";
 import LogoU from "../inicio/modelsLogin-3d/LogoU";
 import { Text3D } from "@react-three/drei";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <>
       <div>
@@ -22,12 +29,19 @@ const Login = () => {
         <div className="input-group">
           <label htmlFor="password">Contraseña:</label>
           <input
-            type="text"
+            type={showPassword ? "text" : "password"}
             className="password-text"
             placeholder=""
             id="password"
             name="password"
           />
+          <button
+            type="button"
+            onClick={togglePassword}
+            className="show-password-btn"
+          >
+            {showPassword ? "Ocultar" : "Ver"}
+          </button>
         </div>
         <Link className="btonIniciarSesion">Iniciar Sesión</Link>
         <div className="divider-grid">
@@ -43,22 +57,22 @@ const Login = () => {
           <Canvas>
             <ambientLight />
             <directionalLight position={[0, 25, -60]} intensity={8} />
-            <LogoU position={[-1, -2.5, -2]} scale={70} />
-            <Text3D position={[-1.3, -2.5, 0]} 
-            font="/fonts/Blue Ocean_Regular.json"
-            bevelEnabled
-            bevelSize={0.01}
-            bevelThickness={0.01}
-            height={0.1}
-            size={0.5}
+            <LogoU position={[-1, -4, -2]} scale={70} />
+            <Text3D
+              position={[-1.3, -3.2, 0]}
+              font="/fonts/Blue Ocean_Regular.json"
+              bevelEnabled
+              bevelSize={0.01}
+              bevelThickness={0.01}
+              height={0.1}
+              size={0.5}
             >
               {" DATA SAVE "}
-              <meshStandardMaterial color= "black"/>
+              <meshStandardMaterial color="black" />
             </Text3D>
           </Canvas>
         </div>
       </div>
-
     </>
   );
 };
