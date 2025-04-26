@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../../firebase"; // 👈 Ajusta la ruta según dónde esté tu firebase.js
+import useAuthStore from "../stores/use-auth-store";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";

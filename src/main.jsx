@@ -1,9 +1,12 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
+import { RouterProvider } from "react-router-dom";
+import Routers from "./router/Routers"; // 👈 Ajusta la ruta si es necesario
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+function App() {
+  return (
+    <>
+      <RouterProvider router={Routers} />
+    </>
+  );
+}
+
+export default App;
