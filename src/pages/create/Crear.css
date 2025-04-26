@@ -102,12 +102,12 @@ body {
 
 .input-wrapper {
   position: relative;
-  margin-bottom: 10px; /* da espacio para el error sin empujar */
+  margin-bottom: 10px; 
 }
 
 .error-message {
   position: absolute;
-  top: 60px; /* ajusta según el alto del input */
+  top: 60px; 
   left: 20px;
   color: red;
   font-size: 0.8em;
