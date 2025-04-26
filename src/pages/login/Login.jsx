@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useAuthStore from "../stores/use-auth-store";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { useAuthStore } from "../../stores/use-auth-store";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";
 import LogoU from "../inicio/modelsLogin-3d/LogoU";
@@ -11,12 +10,13 @@ const Login = () => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate(); // para redireccionar luego del login
+  const loginWithEmailAndPassword = useAuthStore((state) => state.loginWithEmailAndPassword);
 
   const handleLogin = async () => {
     const email = usuario === "Admon" ? "admon@example.com" : usuario; // 👈 traducimos "Admon" a un correo real
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await loginWithEmailAndPassword(email, password);
       console.log("¡Login exitoso!");
       navigate("/dashboard"); // cambia a donde quieras redirigir
     } catch (error) {

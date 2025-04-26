@@ -5,7 +5,7 @@ import {
   signOut 
 } from "firebase/auth";
 
-import { auth } from "/src/firebase/firebase-config"; // Ajusta bien esta ruta si lo necesitas
+import { auth } from "../../firebase";
 
 export const useAuthStore = create((set) => ({
   user: null,
