@@ -3,6 +3,7 @@ import Login from "../pages/login/Login";
 import Crear from "../pages/create/Crear";
 import CrearClientes from "../pages/clientes/CrearClientes/CrearClientes";
 import VerClientes from "../pages/clientes/VerCliente/VerClientes";
+import Home from "../pages/home/Home";
 
 export const Router = createBrowserRouter([
   {
@@ -20,5 +21,9 @@ export const Router = createBrowserRouter([
   {
     path: "/viewClient",
     element: <VerClientes />,
+  },
+  {
+    path: "/Home",
+    element: <Home/>,
   },
 ]);
