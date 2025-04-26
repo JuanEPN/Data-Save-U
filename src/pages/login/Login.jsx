@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import useAuthStore from "../../stores/use-auth-store";
 import "/src/pages/login/Login.css";
 import { Canvas } from "@react-three/fiber";
@@ -9,16 +9,22 @@ import { Text3D } from "@react-three/drei";
 const Login = () => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // para redireccionar luego del login
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const navigate = useNavigate();
   const loginWithEmailAndPassword = useAuthStore((state) => state.loginWithEmailAndPassword);
 
   const handleLogin = async () => {
-    const email = usuario === "Admon" ? "admon@example.com" : usuario; // 👈 traducimos "Admon" a un correo real
+    const email = usuario === "Admon" ? "admon@example.com" : usuario;
 
     try {
       await loginWithEmailAndPassword(email, password);
       console.log("¡Login exitoso!");
-      navigate("/create"); // cambia a donde quieras redirigir
+      navigate("/dashboard"); // Redirecciona al Dashboard
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
       alert("Usuario o contraseña incorrectos");
@@ -44,7 +50,7 @@ const Login = () => {
         <div className="input-group">
           <label htmlFor="password">Contraseña:</label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             className="password-text"
             placeholder=""
             id="password"
@@ -52,6 +58,13 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <button
+            type="button"
+            onClick={togglePassword}
+            className="show-password-btn"
+          >
+            {showPassword ? "Ocultar" : "Ver"}
+          </button>
         </div>
 
         <button className="btonIniciarSesion" onClick={handleLogin}>
@@ -72,9 +85,9 @@ const Login = () => {
           <Canvas>
             <ambientLight />
             <directionalLight position={[0, 25, -60]} intensity={8} />
-            <LogoU position={[-1, -2.5, -2]} scale={70} />
+            <LogoU position={[-1, -4, -2]} scale={70} />
             <Text3D
-              position={[-1.3, -2.5, 0]}
+              position={[-1.3, -3.2, 0]}
               font="/fonts/Blue Ocean_Regular.json"
               bevelEnabled
               bevelSize={0.01}
@@ -93,3 +106,4 @@ const Login = () => {
 };
 
 export default Login;
+
