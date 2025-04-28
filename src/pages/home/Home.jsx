@@ -14,11 +14,11 @@ function Home() {
         <button onClick={() => navigate("/viewClient")} className="menu-button">
           Ver Clientes
         </button>
-        <button onClick={() => navigate("/otra-opcion-1")} className="menu-button">
-          Otra Opción 1
+        <button onClick={() => navigate("/DeleteClient")} className="menu-button">
+          Eliminar Cliente
         </button>
-        <button onClick={() => navigate("/otra-opcion-2")} className="menu-button">
-          Otra Opción 2
+        <button onClick={() => navigate("/UpdateClient")} className="menu-button">
+          Editar Cliente
         </button>
       </div>
     </div>

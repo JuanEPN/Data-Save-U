@@ -48,4 +48,19 @@
     margin-bottom: 20px;
     font-size: 24px;
   }
+  .boton-volver {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3e3662;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .boton-volver:hover {
+    background-color: #575767;
+  }
+  
   

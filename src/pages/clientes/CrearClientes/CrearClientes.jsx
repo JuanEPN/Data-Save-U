@@ -2,8 +2,11 @@ import { useState } from "react";
 import { db } from "../../../../firebase"; 
 import { collection, addDoc } from "firebase/firestore"; 
 import "./CrearClientes.css";
+import { useNavigate } from "react-router-dom";
+
 
 function CrearClientes() {
+  const navigate = useNavigate();
   const [cliente, setCliente] = useState({
     nit: "",
     nombre: "",
@@ -40,6 +43,12 @@ function CrearClientes() {
 
   return (
     <div className="crear-cliente-container">
+    <button 
+      onClick={() => navigate("/home")}
+      className="boton-volver"
+    >
+    Volver al Home
+    </button>
       <h2 className="crear-cliente-title">Crear Cliente</h2>
       <form onSubmit={handleSubmit} className="crear-cliente-form">
         <input 

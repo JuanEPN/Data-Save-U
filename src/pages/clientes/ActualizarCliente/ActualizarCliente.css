@@ -1,0 +1,65 @@
+.actualizar-cliente-container {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  li.seleccionado {
+    background-color: #b3e5fc;
+  }
+  
+  .actualizar-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .actualizar-formulario input,
+  .actualizar-formulario textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .actualizar-formulario button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actualizar-formulario button:hover {
+    background-color: #4cae4c;
+  }
+  .boton-volver {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3e3662;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .boton-volver:hover {
+    background-color: #575767;
+  }
+  
+  
