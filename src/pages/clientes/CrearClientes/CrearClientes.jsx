@@ -15,6 +15,24 @@ function CrearClientes() {
     correo: ""
   });
 
+  const handleNameChange = (e) => {
+    const { name, value } = e.target;
+    if (/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]*$/.test(value)){
+    setCliente({
+      ...cliente,
+      [name]: value
+    })};
+  };
+
+  const handleNitChange = (e) => {
+    const { name, value } = e.target;
+    if (/^[1234567890]*$/.test(value)){
+    setCliente({
+      ...cliente,
+      [name]: value
+    })};
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCliente({
@@ -56,7 +74,7 @@ function CrearClientes() {
           name="nit" 
           placeholder="NIT" 
           value={cliente.nit} 
-          onChange={handleChange} 
+          onChange={handleNitChange} 
           required 
         />
         <input 
@@ -64,7 +82,7 @@ function CrearClientes() {
           name="nombre" 
           placeholder="Nombre" 
           value={cliente.nombre} 
-          onChange={handleChange} 
+          onChange={handleNameChange} 
           required 
         />
         <input 
