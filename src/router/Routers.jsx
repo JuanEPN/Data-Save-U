@@ -4,6 +4,8 @@ import Crear from "../pages/create/Crear";
 import CrearClientes from "../pages/clientes/CrearClientes/CrearClientes";
 import VerClientes from "../pages/clientes/VerCliente/VerClientes";
 import Home from "../pages/home/Home";
+import EliminarClientes from "../pages/clientes/EliminarClientes/EliminarClientes";
+import ActualizarCliente from "../pages/clientes/ActualizarCliente/ActualizarCliente";
 
 export const Router = createBrowserRouter([
   {
@@ -25,5 +27,13 @@ export const Router = createBrowserRouter([
   {
     path: "/Home",
     element: <Home/>,
+  },
+  {
+    path: "/DeleteClient",
+    element: <EliminarClientes/>,
+  },
+  {
+    path: "/UpdateClient",
+    element: <ActualizarCliente/>,
   },
 ]);

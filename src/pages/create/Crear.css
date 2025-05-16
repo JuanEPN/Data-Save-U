@@ -91,6 +91,7 @@ body {
 }
 
 .Logo1 {
+  top: 100%;
   width: 100vw;
   height: 150vh;
   margin-left: -400px;

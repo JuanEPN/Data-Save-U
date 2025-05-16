@@ -84,16 +84,16 @@ const Login = () => {
         <div className="Logo">
           <Canvas>
             <ambientLight />
-            <directionalLight position={[0, 25, -60]} intensity={8} />
-            <LogoU position={[-1, -4, -2]} scale={70} />
+            <directionalLight position={[0, 20, -60]} intensity={8} />
+            <LogoU position={[-3, -4, -2]} scale={160} />
             <Text3D
-              position={[-1.3, -3.2, 0]}
+              position={[-2.6, -3.5, 0]}
               font="/fonts/Blue Ocean_Regular.json"
               bevelEnabled
               bevelSize={0.01}
               bevelThickness={0.01}
-              height={0.1}
-              size={0.5}
+              height={0.2}
+              size={0.9}
             >
               {" DATA SAVE "}
               <meshStandardMaterial color="black" />
