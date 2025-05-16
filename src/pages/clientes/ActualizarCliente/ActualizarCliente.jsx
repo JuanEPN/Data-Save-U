@@ -46,6 +46,18 @@ function ActualizarCliente() {
     setFormulario({ ...formulario, [name]: value });
   };
 
+  const handleNameChange = (e) => {
+    const { name, value } = e.target;
+    if (/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]*$/.test(value)){
+    setFormulario({ ...formulario, [name]: value })};
+  };
+
+  const handleNitChange = (e) => {
+    const { name, value } = e.target;
+    if (/^[1234567890]*$/.test(value)){
+    setFormulario({ ...formulario, [name]: value })};
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!clienteSeleccionado) {
@@ -96,7 +108,7 @@ function ActualizarCliente() {
             name="nit" 
             placeholder="NIT" 
             value={formulario.nit} 
-            onChange={handleChange} 
+            onChange={handleNitChange} 
             required 
           />
           <input 
@@ -104,7 +116,7 @@ function ActualizarCliente() {
             name="nombre" 
             placeholder="Nombre" 
             value={formulario.nombre} 
-            onChange={handleChange} 
+            onChange={handleNameChange} 
             required 
           />
           <input 
