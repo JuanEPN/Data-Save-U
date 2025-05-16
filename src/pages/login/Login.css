@@ -92,7 +92,7 @@
     cursor: pointer;
 }
 
-.btonCrearCuenta {
+/*.btonCrearCuenta {
   margin-top: 20px;
   margin-left: 260px;
   padding: 20px;
@@ -107,10 +107,9 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
-}
+}*/
 
-.btonIniciarSesion:hover,
-.btonCrearCuenta:hover {
+.btonIniciarSesion:hover {
   background-color: #575767;
 }
 
@@ -149,4 +148,59 @@
   height: 350px;
   pointer-events: none;
   z-index: 0;
+}
+
+@media (max-width: 1200px){
+  .Logo{
+
+    left: 12%;
+    width: 25vw;
+    max-width: 240px;
+    max-height: 230px;
+  }
+  .login-content{
+    width: 60vw;
+    min-width: 450px;
+    
+  }
+  .input-group label{
+    
+    width: 12vw;
+    min-width: 90px;
+  }
+  .user-text{
+    max-width: 300px;
+    margin-left: 0px;
+  }
+  .password-text{
+    max-width: 300px;
+  }
+
+  .btonIniciarSesion{
+    width: 70%;
+  }
+  .btonCrearCuenta{
+    width: 70%;
+    width: 360px;
+  }
+}
+
+@media (min-width: 1600px){
+  .Logo{
+    left: 15%;
+    width: 30vw;
+    height: 30vw;
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  .btonIniciarSesion{
+    width: 200px; 
+    height: 50px; 
+  }
+
+  .login-content{
+    width: 40vw;
+    max-width: 800px;
+  }
 }

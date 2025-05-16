@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <div>
+      <div className="login-content">
         <div className="input-group">
           <label htmlFor="usuario">Usuario:</label>
           <input
@@ -70,17 +70,7 @@ const Login = () => {
         <button className="btonIniciarSesion" onClick={handleLogin}>
           Iniciar Sesión
         </button>
-
-        <div className="divider-grid">
-          <hr className="divider-line horizontal" />
-          <span className="divider-text">O</span>
-          <hr className="divider-line horizontal" />
-        </div>
-
-        <Link to="create" className="btonCrearCuenta">
-          Crear una cuenta
-        </Link>
-
+        
         <div className="Logo">
           <Canvas>
             <ambientLight />
