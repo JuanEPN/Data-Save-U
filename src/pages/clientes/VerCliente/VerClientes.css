@@ -45,4 +45,10 @@
   .boton-volver:hover {
     background-color: #575767;
   }
+
+  .table-responsive{
+    overflow: auto;
+  }
   
+
+
