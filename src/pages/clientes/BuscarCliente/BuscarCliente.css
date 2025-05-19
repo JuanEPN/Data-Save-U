@@ -1,0 +1,18 @@
+  .boton-volver-buscar {
+    .boton-volver.buscar {
+    margin-top: 50px;
+    padding: 40px 80px; /* Aumenté el padding (antes era 30px 60px) */
+    background-color: #3e3662;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px; /* Aumenté el tamaño de la fuente (antes 16px) */
+    width: auto; /* Opcional: Puedes definir un ancho fijo ej. width: 300px; */
+    display: inline-block; /* Para que width/height funcionen correctamente */
+}
+  }
+  
+  .boton-volver-buscar:hover {
+    background-color: #575767;
+  }
