@@ -6,6 +6,7 @@ import VerClientes from "../pages/clientes/VerCliente/VerClientes";
 import Home from "../pages/home/Home";
 import EliminarClientes from "../pages/clientes/EliminarClientes/EliminarClientes";
 import ActualizarCliente from "../pages/clientes/ActualizarCliente/ActualizarCliente";
+import BuscarCliente from "../pages/clientes/BuscarCliente/BuscarCliente";
 
 export const Router = createBrowserRouter([
   {
@@ -35,5 +36,9 @@ export const Router = createBrowserRouter([
   {
     path: "/UpdateClient",
     element: <ActualizarCliente/>,
+  },
+  {
+    path: "/SearchClient",
+    element: <BuscarCliente/>,
   },
 ]);
