@@ -90,8 +90,6 @@ function BuscarCliente() {
 
 
     return (
-
-        {/* A continuacion como seria la interfaz de busqueda de clientes
         <div>
             <button
                 onClick={() => navigate("/home")}
@@ -132,7 +130,6 @@ function BuscarCliente() {
                 )}
             </div>
         </div>
-        */}
     );
 }
 
