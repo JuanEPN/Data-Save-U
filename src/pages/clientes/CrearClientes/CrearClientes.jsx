@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { db } from "../../../../firebase"; 
-import { collection, addDoc } from "firebase/firestore"; 
-import "./CrearClientes.css";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore"; 
 import { useNavigate } from "react-router-dom";
+import "./CrearClientes.css";
 
 
 function CrearClientes() {
@@ -26,8 +26,8 @@ function CrearClientes() {
 
   const handleNitChange = (e) => {
     const { name, value } = e.target;
-    if (/^[1234567890]*$/.test(value)){
-    setCliente({
+    if (/^[0-9]*$/.test(value) && value.length <= 9) {
+      setCliente({
       ...cliente,
       [name]: value
     })};
@@ -43,20 +43,34 @@ function CrearClientes() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      await addDoc(collection(db, "clientes"), cliente);
-      alert('Cliente creado exitosamente en Firebase 🚀');
-      setCliente({
-        nit: "",
-        nombre: "",
-        area: "",
-        descripcion: "",
-        correo: ""
-      });
-    } catch (error) {
-      console.error("Error al crear el cliente:", error);
-      alert('Error al crear cliente ❌');
+    //Crear una consulta para verificar si ya existe un cliente con ese NIT
+    const clientesRef = collection(db, "clientes");
+    const q = query(clientesRef, where("nit", "==", cliente.nit));
+    const querySnapshot = await getDocs(q);
+    //Validar si ya existe
+    if (!querySnapshot.empty) {
+      alert('Ya existe un cliente con ese NIT ❌');
+      return;
     }
+
+    //Si no existe, agregar el nuevo cliente
+      await addDoc(clientesRef, cliente);
+    alert("Cliente creado exitosamente en la base de datos 🚀");
+
+    setCliente({
+      nit: "",
+      nombre: "",
+      area: "",
+      descripcion: "",
+      correo: ""
+    });
+
+  } catch (error) {
+    console.error("Error al crear el cliente:", error);
+    alert("Error al crear cliente ❌");
+  }
   };
 
   return (
@@ -76,6 +90,7 @@ function CrearClientes() {
           value={cliente.nit} 
           onChange={handleNitChange} 
           required 
+          maxLength={9}
         />
         <input 
           type="text" 
