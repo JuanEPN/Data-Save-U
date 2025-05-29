@@ -94,7 +94,7 @@ function BuscarCliente() {
             <button
                 onClick={() => navigate("/home")}
                 className="boton-volver-buscar"
-            ></button>
+            >Volver</button>
 
             <h2>Buscar Cliente</h2>
             <div>
@@ -110,7 +110,7 @@ function BuscarCliente() {
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                 />
-                <button onClick={buscarClientes}>Buscar
+                <button onClick={buscarClientes}>
                     {loading ? "Buscando..." : "Buscar"}
                 </button>
             </div>

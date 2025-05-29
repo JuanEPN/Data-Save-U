@@ -54,7 +54,7 @@ function ActualizarCliente() {
 
   const handleNitChange = (e) => {
     const { name, value } = e.target;
-    if (/^[1234567890]*$/.test(value)){
+    if (/^[0-9]*$/.test(value) && value.length <= 9) {
     setFormulario({ ...formulario, [name]: value })};
   };
 
