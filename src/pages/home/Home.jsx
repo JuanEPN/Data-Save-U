@@ -20,12 +20,9 @@ function Home() {
         <button onClick={() => navigate("/UpdateClient")} className="menu-button">
           Editar Cliente
         </button>
-        {/*
-        Posible apartado para agregar más opciones como una interfaz de búsqueda
         <button onClick={() => navigate("/SearchClient")} className="menu-button">
           Buscar Cliente
         </button>
-        */}
       </div>
     </div>
   );
